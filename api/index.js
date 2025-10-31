@@ -2,10 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 //require('dotenv').config(); easier and quicker
 const dotenv = require('dotenv');
+const jwt = require('jsonwebtoken');
 const User = require('./models/User');
 
 dotenv.config();
 mongoose.connect(process.env.MONGO_URL);
+const jwtSecret = process.env.JWT_SECRET;
 
 const app = express();
 
@@ -15,8 +17,11 @@ app.get('/test', (req,res) => {
 
 app.post('/register', async(req,res) => {
     const {username,password} = req.body;
-    await User.create({username,password});
-    res.json();
-})
+    const createdUser = await User.create({username,password});
+    jwt.sign({userID:createdUser._id}, jwtSecret, (err,token) => {
+        if (err) throw err;
+        res.cookie('token', token).status(201).json('ok');
+    });
+});
 
 app.listen(4000);
