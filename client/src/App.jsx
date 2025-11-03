@@ -1,5 +1,4 @@
 import axios from 'axios'
-import Register from './Register'
 import {UserContextProvider} from "./UserContext"
 
 function App() {
@@ -8,7 +7,7 @@ function App() {
 
   return (
     <UserContextProvider>
-      <Register />
+      <Routes />
     </UserContextProvider>
   )
 }
