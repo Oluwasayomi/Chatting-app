@@ -9,7 +9,7 @@ export default function Register() {
     const {setUsername:setLoggedInUsername, setId} = useContext(UserContext);
     async function register(ev) {
         ev.preventDefault();
-        const [data] = await axios.post('./register', {username,password});
+        const [data] = await axios.post('/register', {username,password});
         setLoggedInUsername(username);
         setId(data.id);
     };
