@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const UserContext = createContext({});
 
-function UserContextProvider({children}) {
+export function UserContextProvider({children}) {
     const [username, setUsername] = useState(null);
     const [id, setId] = useState(null);
     useEffect(() => {
@@ -18,5 +18,3 @@ function UserContextProvider({children}) {
         </UserContext.Provider>
     )
 }
-
-export default UserContextProvider;
