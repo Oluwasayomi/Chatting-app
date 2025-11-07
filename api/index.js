@@ -39,6 +39,24 @@ app.get('/profile', (req,res) => {
     }
 });
 
+app.post('/login', async (req,res) => {
+    const {username, password} = req.body;
+    User.find({username});
+    const foundUser = await User.findOne({username});
+    if (foundUser) {
+        const passOk = bcrypt.compareSync(password, foundUser.password);
+        if (passOk) {
+            jwt.sign({userID:foundUser._id,username}, jwtSecret, {}, (err,token) => {
+                if (err) throw err;
+                res.cookie('token', token).json({
+                    id: foundUser._id,
+                });
+            });
+        }
+    }
+
+});
+
 app.post('/register', async(req,res) => {
     const {username,password} = req.body;
     try {
@@ -48,11 +66,11 @@ app.post('/register', async(req,res) => {
             password: hashedPassword
         });
         jwt.sign({userID:createdUser._id,username}, jwtSecret, {}, (err,token) => {
-        if (err) throw err;
-        res.cookie('token', token, {sameSite:'none', secure:true}).status(201).json({
-            _id: createdUser._id,
+            if (err) throw err;
+            res.cookie('token', token, {sameSite:'none', secure:true}).status(201).json({
+                _id: createdUser._id,
+            });
         });
-    });
     } catch(err) {
         if(err) throw err;
         res.status(500).json('error');
