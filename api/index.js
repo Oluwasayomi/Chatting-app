@@ -5,12 +5,20 @@ const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
+const bcrypt = require('bcryptjs');
 const User = require('./models/User');
 
 dotenv.config();
-mongoose.connect(process.env.MONGO_URL, (err) => {
-    if (err) throw err;
-});
+async function connectToMongoDB() {
+  try {
+    await mongoose.connect(process.env.MONGO_URL);
+    console.log('Connected to MongoDB!');
+  } catch (err) {
+    console.error('MongoDB connection error:', err);
+  }
+}
+connectToMongoDB();
+
 const jwtSecret = process.env.JWT_SECRET;
 const bcryptSalt = bcrypt.genSaltSync(10);
 
