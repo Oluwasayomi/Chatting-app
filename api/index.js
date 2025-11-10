@@ -20,15 +20,23 @@ async function connectToMongoDB() {
 connectToMongoDB();
 
 const jwtSecret = process.env.JWT_SECRET;
+const allowedOrigins = process.env.CLIENT_URLS?.split(',').map(origin => origin.trim());
 const bcryptSalt = bcrypt.genSaltSync(10);
 
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    credentials: true,
-    origin: process.env.CLIENT_URL,
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
 }));
+
 
 app.get('/test', (req,res) => {
     res.json('test ok');
