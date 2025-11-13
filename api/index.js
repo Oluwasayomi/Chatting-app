@@ -99,4 +99,5 @@ const server = app.listen(4000);
 const wss = new ws.WebSocketServer({server});
 wss.on('connection', (connection) => {
     console.log('connected');
+    connection.send('hello');
 });
