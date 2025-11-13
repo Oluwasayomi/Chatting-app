@@ -1,4 +1,12 @@
+import { useState } from "react";
+import { useEffect } from "react";
+
 export default function Chat() {
+    const [ws, setWs] = useState(null);
+    useEffect(() => {
+        const ws = new WebSocket('ws://localhost:4000');
+        setWs(ws);
+    }, []);
     return (
         <div className="flex h-screen">
             <div className="bg-amber-400 w-1/3">

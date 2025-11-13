@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const User = require('./models/User');
+const ws = require('ws');
 
 dotenv.config();
 async function connectToMongoDB() {
@@ -94,3 +95,8 @@ app.post('/register', async(req,res) => {
 });
 
 const server = app.listen(4000);
+
+const wss = new ws.WebSocketServer({server});
+wss.on('connection', (connection) => {
+    console.log('connected');
+});
