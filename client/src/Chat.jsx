@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 export default function Chat() {
     const [ws, setWs] = useState(null);
-    const [onlinePeople, setOnlinePeople] = useState([]);
+    const [onlinePeople, setOnlinePeople] = useState({});
     useEffect(() => {
         const ws = new WebSocket('ws://localhost:4000');
         setWs(ws);
@@ -29,6 +29,9 @@ export default function Chat() {
         <div className="flex h-screen">
             <div className="bg-amber-400 w-1/3">
                 Contacts
+                {Object.keys(onlinePeople).map(userId => (
+                    <div>{onlinePeople[userId]}</div>
+                ))}
             </div>
             
             <div className="flex flex-col bg-green-400 w-2/3 p-2">
