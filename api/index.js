@@ -62,7 +62,7 @@ app.post('/login', async (req,res) => {
     if (foundUser) {
         const passOk = bcrypt.compareSync(password, foundUser.password);
         if (passOk) {
-            jwt.sign({userId:foundUser._id,username}, jwtSecret, {}, (err,token) => {
+            jwt.sign({userId:foundUser._id.toString(), username}, jwtSecret, {}, (err,token) => {
                 if (err) throw err;
                 res.cookie('token', token, {sameSite:'none', secure:true}).json({
                     id: foundUser._id,
@@ -80,7 +80,7 @@ app.post('/register', async(req,res) => {
             username: username,
             password: hashedPassword
         });
-        jwt.sign({userId:createdUser._id,username}, jwtSecret, {}, (err,token) => {
+        jwt.sign({userId:createdUser._id.toString(), username}, jwtSecret, {}, (err,token) => {
             if (err) throw err;
             res.cookie('token', token, {sameSite:'none', secure:true}).status(201).json({
                 id: createdUser._id,
@@ -96,6 +96,8 @@ app.post('/register', async(req,res) => {
 const server = app.listen(4000);
 
 const wss = new ws.WebSocketServer({server});
+console.log('WebSocket server listening on port 4000');
+
 wss.on('connection', (connection, req) => {
     const cookies = req.headers.cookie;
     if (cookies) {
