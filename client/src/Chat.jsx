@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Avatar from "./Avatar";
 
 export default function Chat() {
     const [ws, setWs] = useState(null);
     const [onlinePeople, setOnlinePeople] = useState({});
+
     useEffect(() => {
         const ws = new WebSocket('ws://localhost:4000');
         setWs(ws);
@@ -37,7 +37,7 @@ export default function Chat() {
                 </div>
                 <h1 className="text-bold text-2xl border-b-5 border-green-400 pb-2">Contacts</h1>
                 {Object.keys(onlinePeople).map(userId => (
-                    <div className="border-b border-green-200 py-2 flex items items-center gap-2">
+                    <div key={userId} className="border-b border-green-200 py-2 flex items items-center gap-2">
                         <Avatar username={onlinePeople[userId]} userId={userId}/>
                         <span>{onlinePeople[userId]}</span>
                     </div>
