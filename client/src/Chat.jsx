@@ -39,7 +39,7 @@ export default function Chat() {
                 {Object.keys(onlinePeople).map(userId => (
                     <div key={userId} className="border-b border-green-200 py-2 flex items items-center gap-2">
                         <Avatar username={onlinePeople[userId]} userId={userId}/>
-                        <span>{onlinePeople[userId]}</span>
+                        <span className="text-grey-800">{onlinePeople[userId]}</span>
                     </div>
                 ))}
             </div>

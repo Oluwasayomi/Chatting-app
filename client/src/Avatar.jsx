@@ -1,5 +1,5 @@
 export default function Avatar({userId, username}) {
-    
+
     const colors = ['bg-red-400', 'bg-green-400', 
                     'bg-gray-300', 'bg-purple-400', 
                     'bg-blue-400', 'bg-teal-400'];
@@ -10,7 +10,7 @@ export default function Avatar({userId, username}) {
 
     return (
         <div className={"w-8 h-8 rounded-full flex items-center "+color}>
-            <div className="text-center w-full">{username[0]} </div>
+            <div className="text-center w-full opacity-70">{username[0]} </div>
         </div>
     );
 };
