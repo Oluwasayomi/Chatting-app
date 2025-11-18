@@ -1,5 +1,8 @@
 A chatting app made with the MERN stack (mongi, express, react, node.js) and Tailwind css.
 
+<img width="1902" height="912" alt="image" src="https://github.com/user-attachments/assets/78952a50-d91f-4778-abbc-fbcb0a300161" />
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
