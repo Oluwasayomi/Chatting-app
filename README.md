@@ -6,7 +6,8 @@ Login Page:
 
 Chat Page:
 
-<img width="1906" height="912" alt="image" src="https://github.com/user-attachments/assets/5468b431-9ea1-4e44-a846-a378ba843a55" />
+<img width="1910" height="913" alt="image" src="https://github.com/user-attachments/assets/5c27721d-6451-452f-bf3d-cdc541425765" />
+
 
 Login Page Phone:
 
@@ -14,7 +15,7 @@ Login Page Phone:
 
 Chat Page Phone:
 
-<img width="785" height="920" alt="image" src="https://github.com/user-attachments/assets/a403f2e6-4b73-448f-8d23-eac1bbfe8a4d" />
+<img width="610" height="922" alt="image" src="https://github.com/user-attachments/assets/00ea3943-8ed8-4a68-84d4-7ba2ff32f729" />
 
 
 Login Page Evolution:
@@ -29,6 +30,9 @@ Chat Page Evolution:
 <img width="1906" height="912" alt="image" src="https://github.com/user-attachments/assets/5468b431-9ea1-4e44-a846-a378ba843a55" />
 
 <img width="1892" height="906" alt="image" src="https://github.com/user-attachments/assets/8997b23f-6ca2-4827-8b3a-77934e1c37b6" />
+
+<img width="1910" height="913" alt="image" src="https://github.com/user-attachments/assets/1dc96e68-24ee-4992-a632-8b1866225b2c" />
+
 
 
 
