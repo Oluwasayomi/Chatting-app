@@ -2,6 +2,9 @@ A chatting app made with the MERN stack (mongi, express, react, node.js) and Tai
 
 <img width="1902" height="912" alt="image" src="https://github.com/user-attachments/assets/78952a50-d91f-4778-abbc-fbcb0a300161" />
 
+<img width="1906" height="912" alt="image" src="https://github.com/user-attachments/assets/5468b431-9ea1-4e44-a846-a378ba843a55" />
+
+
 
 # React + Vite
 
