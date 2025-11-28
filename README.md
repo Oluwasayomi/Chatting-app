@@ -1,5 +1,50 @@
-A chatting app made with the MERN stack (MongoDB, Express, React, Node.js) and Tailwind CSS.
+## 🗪 Chat App
 
+A chatting app made with the MERN Stack (MongoDB, Express, React, Node.js) and Tailwind CSS. Like a typical chatting app, it allows users to sign in and text other users on the app.
+
+## 🛠 Technologies
+
+* HTML
+* Tailwind CSS
+* JavaScript
+* MongoDB
+* Express
+* React
+* Node.js
+* Vite
+
+## 💡 Features
+
+Here are the website's features:
+
+* Login/Register page.
+* Online users in the Contacts page.
+* Chatting pages.
+* Complementary colours used as background.
+* Separate chat for selected users.
+
+## ✍️ The Process
+
+I wanted to build a chatting app for users, making it easy to tell when other users are online to message them. To start with, I drafted my plan and picked a colour scheme for the app, using complementary colours to provide an artistic visual different from the usual chatting apps we have. I then started simple, first created a simple login/register page, working mostly on the backend to ensure everything was working properly (adding APIs, environment variables, encrypting passwords, handling HTTP requests with Express, linking frontend to backend, etc). I then linked each user to the chatting app, ensuring their session and token were remembered. I then brought the chatting app page to life using structuring with React and styling with Tailwind CSS. 
+
+Afterwards, I added interactability to the chatting app, ensuring users could select contacts and message them. I also other necessary adjustments and fixes along the way to ensure the app was functioning properly.
+
+<!-- Once the basic website was in place, I included different styling based on the screen size, ensuring the website was adaptable for PC, tablet, and phone views. -->
+
+<!-- Finally, I started filtering the types of art according to their respective types, putting them in their various categories. -->
+
+<!-- Can also add 'What I Learned'(like new features, also include Overall growth), and 'How it can be improved' (This one is bullet points)  -->
+
+## 📜 Running the project
+
+To run the project, follow these steps:
+
+* Clone the repository to your local machine
+* Install dependencies: 'npm install'.
+* Run development server: 'npm run dev'.
+* Open 'http://localhost:5173' in your browser
+
+## 📸 App Preview
 Login Page:
 
 <img width="1882" height="890" alt="image" src="https://github.com/user-attachments/assets/d25c2ff3-d02e-4401-a232-3049e2d4958d" />
@@ -33,18 +78,6 @@ Chat Page Evolution:
 
 <img width="1910" height="913" alt="image" src="https://github.com/user-attachments/assets/1dc96e68-24ee-4992-a632-8b1866225b2c" />
 
-
-
-
-
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 # Icon attribution
 
