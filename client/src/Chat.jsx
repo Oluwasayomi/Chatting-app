@@ -55,7 +55,11 @@ export default function Chat() {
             
             <div className="flex flex-col bg-green-400 w-2/3 p-2">
                 <div className="flex-grow">
-                    Messages with selected person
+                    {!selectedUserId && (
+                        <div className="flex h-full items-center justify-center"> 
+                            <div className="text-gray-500 text-center"> No Selected Person <br/> &larr; Select a person from Contacts</div>
+                        </div>
+                    )}
                 </div>
                 <div className="flex gap-2">
                     <input type="text" 
