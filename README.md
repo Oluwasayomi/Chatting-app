@@ -1,3 +1,5 @@
+<img width="1902" height="915" alt="image" src="https://github.com/user-attachments/assets/5e4a4a64-81ed-42a7-b1bf-571427ff1218" />
+
 ## 🗪 Chat App
 
 A chatting app made with the MERN Stack (MongoDB, Express, React, Node.js) and Tailwind CSS. Like a typical chatting app, it allows users to sign in and text other users on the app.
