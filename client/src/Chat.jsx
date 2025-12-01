@@ -72,7 +72,9 @@ export default function Chat() {
                         </div>
                     )}
                 </div>
-                <form className="flex gap-2" onSubmit={sendMessage}>
+                
+                {!!selectedUserId && (
+                    <form className="flex gap-2" onSubmit={sendMessage}>
                     <input type="text" 
                     value={newMessageText}
                     onChange={ev => setNewMessageText(ev.target.value)}
@@ -84,6 +86,8 @@ export default function Chat() {
                         </svg>
                     </button>
                 </form>
+                )}
+                
             </div>
         </div>
     );
