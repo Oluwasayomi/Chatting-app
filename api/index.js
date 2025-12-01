@@ -99,6 +99,8 @@ const wss = new ws.WebSocketServer({server});
 console.log('WebSocket server listening on port 4000');
 
 wss.on('connection', (connection, req) => {
+
+    //read username and id from the cookie for this connection
     const cookies = req.headers.cookie;
     if (cookies) {
         const tokenCookieString = cookies.split(';').find(str => str.startsWith('token='));
@@ -115,6 +117,7 @@ wss.on('connection', (connection, req) => {
         }
     }
 
+    //Notify everyone about online people (when someone connects)
     [...wss.clients].forEach(client => {
         client.send(JSON.stringify(
             {online: [...wss.clients].map(c => ({userId:c.userId, username:c.username})),}
