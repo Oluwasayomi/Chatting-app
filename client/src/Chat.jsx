@@ -28,16 +28,16 @@ export default function Chat() {
         const messageData = JSON.parse(ev.data);
         if ('online' in messageData) {
             showOnlinePeople(messageData.online);
+        } else {
+            console.log({messageData});
         }
     };
 
     function sendMessage(ev) {
         ev.preventDefault();
         ws.send(JSON.stringify({
-            message: {
-                recipient: selectedUserId,
-                text: newMessageText,
-            }
+            recipient: selectedUserId,
+            text: newMessageText,
         }));
     }
 
@@ -72,7 +72,7 @@ export default function Chat() {
                         </div>
                     )}
                 </div>
-                
+
                 {!!selectedUserId && (
                     <form className="flex gap-2" onSubmit={sendMessage}>
                     <input type="text" 
