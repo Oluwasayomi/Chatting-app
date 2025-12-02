@@ -8,6 +8,7 @@ export default function Chat() {
     const [onlinePeople, setOnlinePeople] = useState({});
     const [selectedUserId, setSelectedUserId] = useState(null);
     const [newMessageText, setNewMessageText] = useState('');
+    const [messages, setMessages] = useState([]);
     const {username, id} = useContext(UserContext);
 
     useEffect(() => {
@@ -40,6 +41,7 @@ export default function Chat() {
             text: newMessageText,
         }));
         setNewMessageText('');
+        setMessages(prev => ([...prev,{text: newMessageText, isOur: true}]));
     }
 
     const onlinePeopleExclOurUser = {...onlinePeople};
@@ -70,6 +72,13 @@ export default function Chat() {
                     {!selectedUserId && (
                         <div className="flex h-full items-center justify-center"> 
                             <div className="text-gray-500 text-center"> No Selected Person <br/> &larr; Select a person from Contacts</div>
+                        </div>
+                    )}
+                    {!!selectedUserId && (
+                        <div>
+                            {messages.map(message =>
+                                <div>{message.text}</div>
+                            )}
                         </div>
                     )}
                 </div>
