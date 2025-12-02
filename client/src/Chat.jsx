@@ -39,6 +39,7 @@ export default function Chat() {
             recipient: selectedUserId,
             text: newMessageText,
         }));
+        setNewMessageText('');
     }
 
     const onlinePeopleExclOurUser = {...onlinePeople};
