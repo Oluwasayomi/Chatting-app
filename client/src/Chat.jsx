@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import Avatar from "./Avatar";
 import Logo from "./Logo";
 import { UserContext } from "./UserContext";
+import {uniqBy} from "lodash";
 
 export default function Chat() {
     const [ws, setWs] = useState(null);
