@@ -30,7 +30,7 @@ export default function Chat() {
         console.log({ev,messageData});
         if ('online' in messageData) {
             showOnlinePeople(messageData.online);
-        } else {
+        } else if ('text' in messageData) {
             setMessages(prev => ([...prev, {isOur:false, text:messageData.text}]));
         }
     };
@@ -47,6 +47,8 @@ export default function Chat() {
 
     const onlinePeopleExclOurUser = {...onlinePeople};
     delete onlinePeopleExclOurUser[id];
+
+    const messagesWithoutSupes = messages;
 
     return (
         <div className="flex h-screen">
