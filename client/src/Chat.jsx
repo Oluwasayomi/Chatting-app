@@ -48,7 +48,7 @@ export default function Chat() {
     const onlinePeopleExclOurUser = {...onlinePeople};
     delete onlinePeopleExclOurUser[id];
 
-    const messagesWithoutSupes = messages;
+    const messagesWithoutDupes = uniqBy(messages, 'id');
 
     return (
         <div className="flex h-screen">
@@ -79,7 +79,7 @@ export default function Chat() {
                     )}
                     {!!selectedUserId && (
                         <div>
-                            {messages.map(message =>
+                            {messagesWithoutDupes.map(message =>
                                 <div>{message.text}</div>
                             )}
                         </div>
