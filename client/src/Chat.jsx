@@ -45,7 +45,8 @@ export default function Chat() {
         setNewMessageText('');
         setMessages(prev => ([...prev,{
             text: newMessageText, 
-            isOur: true
+            sender: id,
+            recipient: selectedUserId,
         }]));
     }
 
@@ -85,6 +86,8 @@ export default function Chat() {
                         <div>
                             {messagesWithoutDupes.map(message =>
                                 <div>
+                                    sender: {message.sender} <br/>
+                                    my id: {id}<br/>
                                     {message.text}
                                 </div>
                             )}
