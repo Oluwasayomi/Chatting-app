@@ -47,6 +47,7 @@ export default function Chat() {
             text: newMessageText, 
             sender: id,
             recipient: selectedUserId,
+            id: Date.now(),
         }]));
     }
 
