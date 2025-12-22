@@ -32,7 +32,7 @@ export default function Chat() {
         if ('online' in messageData) {
             showOnlinePeople(messageData.online);
         } else if ('text' in messageData) {
-            setMessages(prev => ([...prev, {isOur:false, text:messageData.text}]));
+            setMessages(prev => ([...prev, {...messageData}]));
         }
     };
 
@@ -43,7 +43,10 @@ export default function Chat() {
             text: newMessageText,
         }));
         setNewMessageText('');
-        setMessages(prev => ([...prev,{text: newMessageText, isOur: true}]));
+        setMessages(prev => ([...prev,{
+            text: newMessageText, 
+            isOur: true
+        }]));
     }
 
     const onlinePeopleExclOurUser = {...onlinePeople};
@@ -81,7 +84,9 @@ export default function Chat() {
                     {!!selectedUserId && (
                         <div>
                             {messagesWithoutDupes.map(message =>
-                                <div>{message.text}</div>
+                                <div>
+                                    {message.text}
+                                </div>
                             )}
                         </div>
                     )}
