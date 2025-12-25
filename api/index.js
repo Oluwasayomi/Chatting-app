@@ -39,18 +39,36 @@ app.use(cors({
   credentials: true,
 }));
 
+async function getUserDataFromRequest(req) {
+    return new Promise((resolve, reject) => {
+        const token = req.cookies?.token;
+        if (token) {
+            jwt.verify(token, jwtSecret, {}, (err, userData) =>{
+                if (err) throw err;
+                resolve(userData);
+            });
+        } else {
+            reject('no token');
+        }
+    })
+};
 
 app.get('/test', (req,res) => {
     res.json('test ok');
+});
+
+app.get('/messages/:userId', (req,res) => {
+    const {userId} = req.params;
+    const userData = getUserDataFromRequest(req);
 });
 
 app.get('/profile', (req,res) => {
     const token = req.cookies?.token;
     if (token) {
         jwt.verify(token, jwtSecret, {}, (err, userData) =>{
-        if (err) throw err;
-        res.json(userData);
-    });
+            if (err) throw err;
+            res.json(userData);
+        });
 
     } else {
         res.status(401).json('no token');
