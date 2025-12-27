@@ -158,7 +158,7 @@ wss.on('connection', (connection, req) => {
                 sender:connection.userId,
                 recipient,
                 id:messageDoc._id,
-            })))
+            })));
         }
     });
 
