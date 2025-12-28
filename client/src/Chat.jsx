@@ -116,8 +116,6 @@ export default function Chat() {
                                 {messagesWithoutDupes.map(message => (
                                     <div className= {(message.sender === id? 'text-right': 'text-left')}>
                                         <div className={"text-left inline-block p-2 my-2 rounded-md text-sm " + (message.sender === id? 'bg-green-500 text-white': 'bg-amber-100 text-gray-500')}> 
-                                            sender: {message.sender} <br/>
-                                            my id: {id}<br/>
                                             {message.text}
                                         </div>
                                     </div>
