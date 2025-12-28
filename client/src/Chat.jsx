@@ -55,11 +55,12 @@ export default function Chat() {
             text: newMessageText,
         }));
         setNewMessageText('');
+        console.log('message sent');
         setMessages(prev => ([...prev,{
             text: newMessageText, 
             sender: id,
             recipient: selectedUserId,
-            id: Date.now(),
+            _id: Date.now(),
         }]));
     }
 
