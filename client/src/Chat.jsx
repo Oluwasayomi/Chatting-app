@@ -5,6 +5,7 @@ import { UserContext } from "./UserContext";
 import {uniqBy} from "lodash";
 import axios from "axios";
 import { on } from "../../api/models/User";
+import Contact from "./Contact";
 
 export default function Chat() {
     const [ws, setWs] = useState(null);
@@ -105,17 +106,12 @@ export default function Chat() {
                 <Logo />
                 <h1 className="text-bold text-2xl border-b-5 border-green-400 pb-2 pl-4">Contacts</h1>
                 {Object.keys(onlinePeopleExclOurUser).map(userId => (
-                    <div onClick={() => setSelectedUserId(userId)} 
-                        key={userId} 
-                        className={"border-b border-green-200 flex items items-center gap-2 cursor-pointer " +(userId === selectedUserId ? 'bg-green-400' : '')}>
-                            {userId === selectedUserId && (
-                                <div className="w-1 bg-green-700 h-12 rounded-r-md"></div>
-                            )}
-                        <div className="flex gap-2 py-2 pl-4 items-center">
-                            <Avatar online={true} username={onlinePeople[userId]} userId={userId}/>
-                            <span className="text-grey-800">{onlinePeople[userId]}</span>
-                        </div>
-                    </div>
+                    <Contact 
+                    id= {userId}
+                    username={onlinePeopleExclOurUser[userId]}
+                    onClick={() => setSelectedUserId(userId)}
+                    selected={userId === selectedUserId}
+                    /> 
                 ))}
             </div>
             
