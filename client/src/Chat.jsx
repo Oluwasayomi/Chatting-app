@@ -4,10 +4,12 @@ import Logo from "./Logo";
 import { UserContext } from "./UserContext";
 import {uniqBy} from "lodash";
 import axios from "axios";
+import { on } from "../../api/models/User";
 
 export default function Chat() {
     const [ws, setWs] = useState(null);
     const [onlinePeople, setOnlinePeople] = useState({});
+    const [offlinePeople, setOfflinePeople] = useState({});
     const [selectedUserId, setSelectedUserId] = useState(null);
     const [newMessageText, setNewMessageText] = useState('');
     const [messages, setMessages] = useState([]);
@@ -72,7 +74,16 @@ export default function Chat() {
     }, [messages]);
 
     useEffect(() => {
-        axios.get('/people');
+        axios.get('/people').then(res => {
+            const offlinePeopleArr = res.data
+                .filter(p => p._id !== id) //exclude our id
+                .filter(p => !Object.keys(onlinePeople).includes(p._id)); //exclude online people
+            const offlinePeople = {};
+            offlinePeopleArr.forEach(p => {
+                offlinePeople[p._id] = p;
+            });
+            setOfflinePeople(offlinePeople);
+        });
     }, [onlinePeople]);
 
     useEffect(() => {
