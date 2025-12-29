@@ -4,7 +4,6 @@ import Logo from "./Logo";
 import { UserContext } from "./UserContext";
 import {uniqBy} from "lodash";
 import axios from "axios";
-import { on } from "../../api/models/User";
 import Contact from "./Contact";
 
 export default function Chat() {
