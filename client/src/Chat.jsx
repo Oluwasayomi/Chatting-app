@@ -72,6 +72,10 @@ export default function Chat() {
     }, [messages]);
 
     useEffect(() => {
+        axios.get('/people');
+    }, [onlinePeople]);
+
+    useEffect(() => {
         if (selectedUserId) {
             axios.get('/messages/'+selectedUserId).then(res => {
                 setMessages(res.data);
