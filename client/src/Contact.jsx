@@ -3,7 +3,7 @@ import Avatar from "./Avatar.jsx";
 export default function Contact({id, username, onClick, selected}) {
     return (
         <div key={id} onClick={() => onClick(id)} 
-             className={"border-b border-green-200 flex items items-center gap-2 cursor-pointer " +(id === selectedUserId ? 'bg-green-400' : '')}>
+             className={"border-b border-green-200 flex items items-center gap-2 cursor-pointer " +(id === selected ? 'bg-green-400' : '')}>
             {id === selected && (
                 <div className="w-1 bg-green-700 h-12 rounded-r-md"></div>
             )}
