@@ -107,6 +107,7 @@ export default function Chat() {
                 {Object.keys(onlinePeopleExclOurUser).map(userId => (
                     <Contact 
                     id= {userId}
+                    online={true}
                     username={onlinePeopleExclOurUser[userId]}
                     onClick={() => setSelectedUserId(userId)}
                     selected={userId === selectedUserId}
