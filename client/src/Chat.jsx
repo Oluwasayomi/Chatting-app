@@ -106,9 +106,21 @@ export default function Chat() {
                 <h1 className="text-bold text-2xl border-b-5 border-green-400 pb-2 pl-4">Contacts</h1>
                 {Object.keys(onlinePeopleExclOurUser).map(userId => (
                     <Contact 
+                    key={userId}
                     id= {userId}
                     online={true}
                     username={onlinePeopleExclOurUser[userId]}
+                    onClick={() => setSelectedUserId(userId)}
+                    selected={userId === selectedUserId}
+                    /> 
+                ))}
+
+                {Object.keys(offlinePeople).map(userId => (
+                    <Contact 
+                    key={userId}
+                    id= {userId}
+                    online={false}
+                    username={offlinePeople[userId].username}
                     onClick={() => setSelectedUserId(userId)}
                     selected={userId === selectedUserId}
                     /> 
