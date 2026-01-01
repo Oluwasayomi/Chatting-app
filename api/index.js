@@ -130,6 +130,21 @@ console.log('WebSocket server listening on port 4000');
 
 wss.on('connection', (connection, req) => {
 
+    connection.isAlive = true;
+
+    connection.timer = setInterval(() => {
+        connection.ping();
+        connection.deathTimer = setTimeout(() => {
+            connection.isAlive = false;
+            connection.terminate();
+            console.log('dead');
+        }, 1000);
+    }, 5000);
+
+    connection.on('pong', () => {
+        clearTimeout(connection.deathTimer);
+    });
+
     //read username and id from the cookie for this connection
     const cookies = req.headers.cookie;
     if (cookies) {
