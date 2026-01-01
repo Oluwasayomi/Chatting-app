@@ -174,3 +174,7 @@ wss.on('connection', (connection, req) => {
         ))
     });
 });
+
+wss.on('close', data => {
+    console.log('disconnected', data);
+});
