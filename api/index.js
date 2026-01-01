@@ -130,13 +130,24 @@ console.log('WebSocket server listening on port 4000');
 
 wss.on('connection', (connection, req) => {
 
+    //Notify everyone about online people (when someone connects)
+    function notifyAboutOnlinePeople() {
+        [...wss.clients].forEach(client => {
+            client.send(JSON.stringify(
+                {online: [...wss.clients].map(c => ({userId:c.userId, username:c.username})),}
+            ))
+        });
+    };
+
     connection.isAlive = true;
 
+    //ping user and disconnect if offline
     connection.timer = setInterval(() => {
         connection.ping();
         connection.deathTimer = setTimeout(() => {
             connection.isAlive = false;
             connection.terminate();
+            notifyAboutOnlinePeople();
             console.log('dead');
         }, 1000);
     }, 5000);
@@ -183,11 +194,7 @@ wss.on('connection', (connection, req) => {
     });
 
     //Notify everyone about online people (when someone connects)
-    [...wss.clients].forEach(client => {
-        client.send(JSON.stringify(
-            {online: [...wss.clients].map(c => ({userId:c.userId, username:c.username})),}
-        ))
-    });
+    notifyAboutOnlinePeople();
 });
 
 wss.on('close', data => {
