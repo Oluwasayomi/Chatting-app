@@ -138,7 +138,7 @@ export default function Chat() {
                 <div className="p-2 text-center">
                     <button 
                     onClick={logout}
-                    className="text-sm bg-green-300 py-1 px-2 text-gray-700 border rounded-sm">
+                    className="text-sm bg-green-400 py-1 px-2 text-gray-700 border rounded-sm">
                         Logout
                     </button>
                 </div>
