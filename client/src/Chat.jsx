@@ -13,7 +13,7 @@ export default function Chat() {
     const [selectedUserId, setSelectedUserId] = useState(null);
     const [newMessageText, setNewMessageText] = useState('');
     const [messages, setMessages] = useState([]);
-    const {username, id} = useContext(UserContext);
+    const {username, id, setId, setUsername} = useContext(UserContext);
     const divUnderMessages = useRef();
 
     useEffect(() => {
@@ -48,6 +48,13 @@ export default function Chat() {
         } else if ('text' in messageData) {
             setMessages(prev => ([...prev, {...messageData}]));
         }
+    };
+
+    function logout() {
+        axios.post('/logout').then(() => {
+            setId(null);
+            setUsername(null);
+        });
     };
 
     function sendMessage(ev) {
@@ -129,7 +136,11 @@ export default function Chat() {
                 </div>
 
                 <div className="p-2 text-center">
-                    <button className="text-sm bg-green-300 py-1 px-2 text-gray-700 border rounded-sm">Logout</button>
+                    <button 
+                    onClick={logout}
+                    className="text-sm bg-green-300 py-1 px-2 text-gray-700 border rounded-sm">
+                        Logout
+                    </button>
                 </div>
             </div>
             
