@@ -196,7 +196,3 @@ wss.on('connection', (connection, req) => {
     //Notify everyone about online people (when someone connects)
     notifyAboutOnlinePeople();
 });
-
-wss.on('close', data => {
-    console.log('disconnected', data);
-});
