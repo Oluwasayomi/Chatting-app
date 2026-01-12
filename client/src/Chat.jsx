@@ -181,11 +181,12 @@ export default function Chat() {
                     onChange={ev => setNewMessageText(ev.target.value)}
                     placeholder="Type your message here" 
                     className="bg-white flex-grow border rounded-sm p-2"/>
-                    <button type="button" className="bg-gray-200 p-2 text-pink-500 rounded-sm border border-pink-300">
+                    <label className="bg-gray-200 p-2 text-pink-500 cursor-pointer rounded-sm border border-pink-300">
+                        <input type="file" className="hidden"/>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                             <path fill-rule="evenodd" d="M18.97 3.659a2.25 2.25 0 0 0-3.182 0l-10.94 10.94a3.75 3.75 0 1 0 5.304 5.303l7.693-7.693a.75.75 0 0 1 1.06 1.06l-7.693 7.693a5.25 5.25 0 1 1-7.424-7.424l10.939-10.94a3.75 3.75 0 1 1 5.303 5.304L9.097 18.835l-.008.008-.007.007-.002.002-.003.002A2.25 2.25 0 0 1 5.91 15.66l7.81-7.81a.75.75 0 0 1 1.061 1.06l-7.81 7.81a.75.75 0 0 0 1.054 1.068L18.97 6.84a2.25 2.25 0 0 0 0-3.182Z" clip-rule="evenodd" />
                         </svg>
-                    </button>
+                    </label>
                     <button type="submit" className="bg-amber-500 p-2 text-white rounded-sm">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
