@@ -80,7 +80,7 @@ export default function Chat() {
         reader.readAsDataURL(ev.target.files[0]);
         reader.onload = () => {
             sendMessage(null, {
-                info: ev.target.files[0],
+                name: ev.target.files[0].name,
                 data: reader.result,
             });
         };
