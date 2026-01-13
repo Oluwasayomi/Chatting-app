@@ -186,7 +186,8 @@ wss.on('connection', (connection, req) => {
             const ext = parts[parts.length - 1];
             const filename = Date.now() + '.'+ext;
             const path = __dirname + '/uploads/'+ filename;
-            fs.writeFile(path);
+            const bufferData = new Buffer(file.data, 'base64');
+            fs.writeFile(path, bufferData);
         }
         if (recipient  && text) {
             const messageDoc = await Message.create({
