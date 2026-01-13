@@ -182,10 +182,11 @@ wss.on('connection', (connection, req) => {
     connection.on('message', async (message) => {
         const messageData = JSON.parse(message.toString());
         const {recipient, text, file} = messageData;
+        let filename = null;
         if (file) {
             const parts = file.name.split('.');
             const ext = parts[parts.length - 1];
-            const filename = Date.now() + '.'+ext;
+            filename = Date.now() + '.'+ext;
             const path = __dirname + '/uploads/'+ filename;
             const bufferData = new Buffer(file.data, 'base64');
             fs.writeFile(path, bufferData, () => {
@@ -197,6 +198,7 @@ wss.on('connection', (connection, req) => {
                 sender:connection.userId,
                 recipient,
                 text,
+                file: file ? filename : null,
             });
             [...wss.clients]
             .filter(c => c.userId === recipient)
