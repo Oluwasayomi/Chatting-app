@@ -9,6 +9,7 @@ const bcrypt = require('bcryptjs');
 const User = require('./models/User');
 const Message = require('./models/Message');
 const ws = require('ws');
+const fs = require('fs'); //file system
 
 dotenv.config();
 async function connectToMongoDB() {
@@ -179,7 +180,14 @@ wss.on('connection', (connection, req) => {
 
     connection.on('message', async (message) => {
         const messageData = JSON.parse(message.toString());
-        const {recipient, text} = messageData;
+        const {recipient, text, file} = messageData;
+        if (file) {
+            const parts = file.name.split('.');
+            const ext = parts[parts.length - 1];
+            const filename = Date.now() + '.'+ext;
+            const path = __dirname + '/uploads/'+ filename;
+            fs.writeFile(path);
+        }
         if (recipient  && text) {
             const messageDoc = await Message.create({
                 sender:connection.userId,
