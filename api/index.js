@@ -27,6 +27,7 @@ const allowedOrigins = process.env.CLIENT_URLS?.split(',').map(origin => origin.
 const bcryptSalt = bcrypt.genSaltSync(10);
 
 const app = express();
+app.use('/uploads', express.static(__dirname + '/uploads'));
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
@@ -187,7 +188,9 @@ wss.on('connection', (connection, req) => {
             const filename = Date.now() + '.'+ext;
             const path = __dirname + '/uploads/'+ filename;
             const bufferData = new Buffer(file.data, 'base64');
-            fs.writeFile(path, bufferData);
+            fs.writeFile(path, bufferData, () => {
+                console.log('file saved:'+path);
+            });
         }
         if (recipient  && text) {
             const messageDoc = await Message.create({
