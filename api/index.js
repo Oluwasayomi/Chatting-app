@@ -206,6 +206,7 @@ wss.on('connection', (connection, req) => {
                 text,
                 sender:connection.userId,
                 recipient,
+                file: file ? filename: null,
                 _id:messageDoc._id,
             })));
         }
