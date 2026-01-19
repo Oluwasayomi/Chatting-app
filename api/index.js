@@ -193,7 +193,7 @@ wss.on('connection', (connection, req) => {
                 console.log('file saved:'+path);
             });
         }
-        if (recipient  && text) {
+        if (recipient  && (text || file)) {
             const messageDoc = await Message.create({
                 sender:connection.userId,
                 recipient,

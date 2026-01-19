@@ -73,6 +73,11 @@ export default function Chat() {
             recipient: selectedUserId,
             _id: Date.now(),
         }]));
+        if (file) {
+            axios.get('/messages/'+selectedUserId).then(res => {
+                setMessages(res.data);
+            });
+        }
     }
 
     function sendFile(ev) {
@@ -177,6 +182,13 @@ export default function Chat() {
                                     <div className= {(message.sender === id? 'text-right': 'text-left')}>
                                         <div className={"text-left inline-block p-2 my-2 rounded-md text-sm " + (message.sender === id? 'bg-green-500 text-white': 'bg-amber-100 text-gray-500')}> 
                                             {message.text}
+                                            {message.file && (
+                                                <div>
+                                                    <a href={axios.defaults.baseURL + '/' + message.file}>
+                                                        {message.file}
+                                                    </a>
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 ))}
