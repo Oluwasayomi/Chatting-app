@@ -1,6 +1,7 @@
 import { useContext, useState} from "react";
 import axios from 'axios';
 import { UserContext } from "./UserContext";
+import chat from '/chat.png';
 
 export default function RegisterAndLogin() {
     
@@ -17,8 +18,12 @@ export default function RegisterAndLogin() {
     };
 
     return (
-        <div className="bg-green-400 h-screen flex items-center">
-            <form className="w-64 mx-auto mb-12" onSubmit={handleSubmit}>
+        <div className="bg-green-400 h-screen flex flex-col md:flex-row items-center justify-center md:justify-start">
+            <div className="md:basis-1/2 w-full flex justify-center md:justify-start">
+                <img src={chat} alt="chat logo" className="w-64 md:w-auto"/>
+            </div>
+
+            <form className="md:basis-1/2 w-full max-w-xl mx-auto mb-12 p-6" onSubmit={handleSubmit}>
                 <input value={username} 
                     onChange={ev => setUsername(ev.target.value)} 
                     type="text" 
