@@ -18,8 +18,8 @@ export default function RegisterAndLogin() {
     };
 
     return (
-        <div className="bg-green-400 h-screen flex flex-col md:flex-row items-center md:p-20 justify-center md:justify-start">
-            <div className="md:basis-1/2 w-full flex justify-center md:justify-start">
+        <div className="bg-green-400 h-screen flex flex-col md:flex-row items-center justify-center md:justify-start">
+            <div className="md:basis-1/2 w-full md:h-full md:bg-amber-300 flex justify-center items-center md:justify-start">
                 <img src={chat} alt="chat logo" className="w-64 md:w-auto"/>
             </div>
 
