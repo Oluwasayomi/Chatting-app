@@ -41,10 +41,6 @@ Finally, I was left with a chatting app for users with online/offline indication
 
 Overall, this was fundamentally a full-stack development challenge that aimed to help me better understand the MERN stack and, more importantly, the backend side of full-stack (and it was a success!)
 
-<!-- Once the basic website was in place, I included different styling based on the screen size, especially ensuring the website was adaptable for PC, tablet, and phone views. -->
-
-<!-- Can also add 'What I Learned'(like new features, also include Overall growth), and 'How it can be improved' (This one is bullet points)  -->
-
 ## 🎓 What I Learned
 
 I learnt so many things in this project. For example, with mongoDB, this was my first time using it in a proper project for autentication, database, and even ip access, and it was amazing! I also learnt how to apply user uniqueness and requirements with mongoose. 
@@ -52,6 +48,10 @@ As it was my first time using the full MERN stack, I learnt a great deal about E
 Furthermore, I got more comfortable using Tailwind which I used to avoid in the past since I didn't exactly welcome writing my CSS in the same place as my html/React, but it turned out to be not so bad!
 Of course I also learned how to fix so many errors and what causes those erroes as well (like state overwrite errors among others). Overall, I learnt a lot and have grown so much through this project.
 
+## 🛠️ How it can be improved
+
+* Style that horizontal scroll in the chat page.
+* Improve the UI of the app
 
 ## 📜 Running the project
 
