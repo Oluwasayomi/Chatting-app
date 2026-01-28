@@ -43,10 +43,10 @@ Overall, this was fundamentally a full-stack development challenge that aimed to
 
 ## 🎓 What I Learned
 
-I learnt so many things in this project. For example, with mongoDB, this was my first time using it in a proper project for autentication, database, and even ip access, and it was amazing! I also learnt how to apply user uniqueness and requirements with mongoose. 
-As it was my first time using the full MERN stack, I learnt a great deal about Express (handling http requests and ap routes with it). I also learned so many useful add-ons like jsonwebtoken (for encoding/making tokens), bycryptjs (for encrypting passowrds), and lodash (for unique functions, eg preventing duplicates). 
-Furthermore, I got more comfortable using Tailwind which I used to avoid in the past since I didn't exactly welcome writing my CSS in the same place as my html/React, but it turned out to be not so bad!
-Of course I also learned how to fix so many errors and what causes those erroes as well (like state overwrite errors among others). Overall, I learnt a lot and have grown so much through this project.
+I learnt so many things in this project. For example, with MongoDB, this was my first time using it in a proper project for authentication, database, and even ip access, and it was amazing! I also learnt how to apply user uniqueness and requirements with Mongoose. 
+As it was my first time using the full MERN stack, I learnt a great deal about Express (handling HTTP requests and ap routes with it). I also learned so many useful add-ons like jsonwebtoken (for encoding/making tokens), bycryptjs (for encrypting passwords), and lodash (for unique functions, e.g., preventing duplicates). 
+Furthermore, I got more comfortable using Tailwind, which I used to avoid in the past since I didn't exactly welcome writing my CSS in the same place as my HTML/React, but it turned out to be not so bad!
+Of course, I also learned how to fix so many errors and what causes those errors as well (like state overwrite errors, among others). Overall, I learnt a lot and have grown so much through this project.
 
 ## 🛠️ How it can be improved
 
