@@ -1,4 +1,4 @@
-<img width="1902" height="915" alt="image" src="https://github.com/user-attachments/assets/5e4a4a64-81ed-42a7-b1bf-571427ff1218" />
+<img width="1906" height="917" alt="image" src="https://github.com/user-attachments/assets/c5a57474-d077-4edc-8bf2-79ca2c99d748" />
 
 ## 🗪 Chat App
 
