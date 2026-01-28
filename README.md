@@ -49,36 +49,38 @@ To run the project, follow these steps:
 ## 📸 App Preview
 Login Page:
 
-<img width="1882" height="890" alt="image" src="https://github.com/user-attachments/assets/d25c2ff3-d02e-4401-a232-3049e2d4958d" />
+<img width="1906" height="917" alt="image" src="https://github.com/user-attachments/assets/c5a57474-d077-4edc-8bf2-79ca2c99d748" />
 
 Chat Page:
 
-<img width="1910" height="913" alt="image" src="https://github.com/user-attachments/assets/5c27721d-6451-452f-bf3d-cdc541425765" />
-
+<img width="1902" height="917" alt="image" src="https://github.com/user-attachments/assets/7a7d1b6a-8b6a-47dc-a6f9-8c20e5af1d50" />
 
 Login Page Phone:
 
-<img width="581" height="827" alt="image" src="https://github.com/user-attachments/assets/423ed89e-0702-4751-99c7-84eccb05b5fd" />
+<img width="603" height="913" alt="image" src="https://github.com/user-attachments/assets/e4500ab6-5932-4289-aab8-cbcc70ee9408" />
 
-Chat Page Phone:
+# Login Page Evolution:
 
-<img width="610" height="922" alt="image" src="https://github.com/user-attachments/assets/00ea3943-8ed8-4a68-84d4-7ba2ff32f729" />
-
-
-Login Page Evolution:
+From:
 
 <img width="1882" height="890" alt="image" src="https://github.com/user-attachments/assets/225c7ff8-de48-4c93-a1d6-709750cc1c3a" />
 
+To:
 
-Chat Page Evolution:
+<img width="1906" height="917" alt="image" src="https://github.com/user-attachments/assets/ee246a24-0ad7-4542-8153-8244b6c3a4ce" />
+<img width="603" height="913" alt="image" src="https://github.com/user-attachments/assets/1c297c3f-7f49-4929-a09d-246310d1f612" />
+
+
+# Chat Page Evolution:
+From:
 
 <img width="1902" height="912" alt="image" src="https://github.com/user-attachments/assets/78952a50-d91f-4778-abbc-fbcb0a300161" />
 
-<img width="1906" height="912" alt="image" src="https://github.com/user-attachments/assets/5468b431-9ea1-4e44-a846-a378ba843a55" />
+To: 
 
-<img width="1892" height="906" alt="image" src="https://github.com/user-attachments/assets/8997b23f-6ca2-4827-8b3a-77934e1c37b6" />
+<img width="1902" height="917" alt="image" src="https://github.com/user-attachments/assets/8f500b1b-3376-4cdc-8156-18e8faf07078" />
 
-<img width="1910" height="913" alt="image" src="https://github.com/user-attachments/assets/1dc96e68-24ee-4992-a632-8b1866225b2c" />
+<img width="1903" height="917" alt="image" src="https://github.com/user-attachments/assets/85b13283-692b-4eb2-bbfb-291aa68f70a0" />
 
 
 # Icon attribution
