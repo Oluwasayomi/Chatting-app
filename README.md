@@ -73,7 +73,7 @@ Chat Page:
 
 Login Page Phone:
 
-<img width="603" height="913" alt="image" src="https://github.com/user-attachments/assets/e4500ab6-5932-4289-aab8-cbcc70ee9408" />
+<img width="241" height="365" alt="image" src="https://github.com/user-attachments/assets/e4500ab6-5932-4289-aab8-cbcc70ee9408" />
 
 # Login Page Evolution:
 
@@ -84,7 +84,7 @@ From:
 To:
 
 <img width="1906" height="917" alt="image" src="https://github.com/user-attachments/assets/ee246a24-0ad7-4542-8153-8244b6c3a4ce" />
-<img width="603" height="913" alt="image" src="https://github.com/user-attachments/assets/1c297c3f-7f49-4929-a09d-246310d1f612" />
+<img width="241" height="365" alt="image" src="https://github.com/user-attachments/assets/1c297c3f-7f49-4929-a09d-246310d1f612" />
 
 
 # Chat Page Evolution:
