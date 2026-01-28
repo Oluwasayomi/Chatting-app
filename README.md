@@ -27,13 +27,21 @@ Here are the website's features:
 
 ## ✍️ The Process
 
-I wanted to build a chatting app for users, making it easy to tell when other users are online to message them. To start with, I drafted my plan and picked a colour scheme for the app, using complementary colours to provide an artistic visual different from the usual chatting apps we have. I then started simple, first created a simple login/register page, working mostly on the backend to ensure everything was working properly (adding APIs, environment variables, encrypting passwords, handling HTTP requests with Express, linking frontend to backend, etc). I then linked each user to the chatting app, ensuring their session and token were remembered. I then brought the chatting app page to life using structuring with React and styling with Tailwind CSS. 
+I wanted to develop my backend skills, so I decided to work on something that was more backend-heavy. I decided on this chat app, going with a very minimalistic design to ensure I didn't get sidetracked into focusing on the frontend (though there were relapses, but it helped for the most part lol).
 
-Afterwards, I added interactability to the chatting app, ensuring users could select contacts and message them. I also other necessary adjustments and fixes along the way to ensure the app was functioning properly.
+To start with, I drafted my plan and picked a colour scheme for the app, using complementary colours to offer an artistic touch different from the usual chatting apps, but still with a reasonably straightforward design. 
 
-<!-- Once the basic website was in place, I included different styling based on the screen size, ensuring the website was adaptable for PC, tablet, and phone views. -->
+I started simple, first creating a simple login/register page and then concentrating mostly on the backend to ensure everything was working properly (adding APIs and api request with axios, secured environment variables with dotenv, encrypting passwords with bycryptjs, handling HTTP requests with Express, linking the frontend to backend with cors, websocket server for the connections/auto-reconnections, etc). I then linked each user to the chatting app, ensuring their session and token were remembered. After most of the backend work was done, I went back to the frontend, bringing the chatting app page to life using React and styling it with Tailwind CSS.
 
-<!-- Finally, I started filtering the types of art according to their respective types, putting them in their various categories. -->
+Afterwards, I added interactability to the chatting app, ensuring users could select contacts and message them. I also made other necessary adjustments (eg, adaptability: changing the mobile view for the login page) and fixes along the way to ensure the app was functioning properly.
+
+Side-note: There were so many errors that came up, and almost half of the time I spent on this project was on trying to find the problems and fix them, but in the end, it was so worth it! The satisfaction of fixing a bug is always amazing.
+
+Finally, I was left with a chatting app for users with online/offline indications, making it easy to tell when other users are online to message them!
+
+Overall, this was fundamentally a full-stack development challenge that aimed to help me better understand the MERN stack and, more importantly, the backend side of full-stack (and it was a success!)
+
+<!-- Once the basic website was in place, I included different styling based on the screen size, especially ensuring the website was adaptable for PC, tablet, and phone views. -->
 
 <!-- Can also add 'What I Learned'(like new features, also include Overall growth), and 'How it can be improved' (This one is bullet points)  -->
 
